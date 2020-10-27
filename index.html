@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-eric="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Content-Security-Policy" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+  <body>
+    <ul>
+      <li><p>inside the li is ok</p></li>
+      <li>item 1</li>
+    </ul>
+
+    nav, section, main, footer, aside, time
+    <figure>
+      <img src="" alt="" />
+      <figcaption>The figure description</figcaption>
+    </figure>
+    <!-- 
+      image video https://www.youtube.com/watch?v=mwu2U_Sm6LY 
+      responsive images https://www.youtube.com/watch?v=v02MRRWTUr8
+    -->
+    <picture>
+      <source srcset="./img1.jpg" media="(min-width:1200px)" />
+      <source srcset="./img2.jpg" media="(max-width: 600px)" />
+      <source srcset="./bw-img.jpg" media="print" />
+      <img src="./img3.jpg" alt="alternative text" />
+    </picture>
+    <!--
+      Relative Paths
+      ./ current folder where the HTML file was OR CSS file
+      in JS the paths are relative to the HTML file.
+      ../ up one level
+      /  root folder
+      
+      Absolute Paths
+      http://
+      https://
+      file:/// 
+    -->
+    <nav role="navigation">
+      <ul role="menu">
+        <li role="menuitem"></li>
+      </ul>
+    </nav>
+    <section id="section1" class="red big italK" role="article">
+      <p class="red">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima unde,
+        neque ratione laudantium voluptate suscipit aliquam nam necessitatibus
+        obcaecati commodi. Ducimus vero itaque sit, molestias dolores nobis
+        suscipit nostrum pariatur?
+      </p>
+      <p class="big">
+        Sunt eius, quia eum aliquam quae voluptates adipisci rerum illum debitis
+        ea officia unde explicabo quo hic, odit rem architecto a! Minus, cum
+        dolore! Illo veniam sunt quos a sapiente!
+      </p>
+      <p class="italK">
+        Laboriosam quae illum perferendis, architecto voluptate nesciunt hic
+        pariatur repellendus exercitationem excepturi possimus ea deleniti quos
+        accusantium quibusdam ut, recusandae ex doloribus. Placeat eaque
+        repellat alias, velit dolorum sapiente neque!
+      </p>
+    </section>
+    <script defer src="js/main.js"></script>
+  </body>
+</html>

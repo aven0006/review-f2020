@@ -1,0 +1,93 @@
+/* selectors */
+p,
+div {
+  /* all p and all div */
+}
+div p {
+  /* descendant selectors any p inside any div at any depth */
+}
+div > p {
+  /* child selector  <div><p></p></div> */
+}
+[title] {
+  /* has a title attribute */
+}
+[title='hello'] {
+  /* has a title with the value hello */
+}
+h1[title='hello'] {
+  /* <h1 title="hello"> */
+}
+h1 [title='hello'] span {
+  /* <h1> <a href="" title="hello"> <span>Style here</span></a></h1> */
+}
+p + img {
+  /* img comes after the p */
+}
+p ~ img {
+  /* img and p are siblings (same parent) */
+}
+:nth-child(4) {
+}
+:nth-child(3n) {
+  /* every third */
+}
+p:nth-child(3n + 5) {
+  /* 5, 8, 11,  
+  (odd)
+  (even)
+  */
+}
+section p:nth-child(2n) {
+  /* <section> <h2>1</h2> <p>2X</p> <p>3</p> <p>4X</p> <p>5</p></section> 
+  count ALL siblings
+  */
+}
+section p:nth-of-type(2n) {
+  /* <section> <h2></h2> <p>1</p> <p>2x</p> <p>3</p> <p>4x</p></section> 
+  siblings of that type
+  */
+}
+
+img:not([alt]) {
+}
+
+html body main section p a span {
+}
+.link.ref {
+  /* something that has both classes */
+}
+
+/* specificity */
+
+/*             id (worth 100) classes (worth 10) tag (worth 1) 
+p                                                 1
+p.red                           1                 1
+p#fred          1               0                 1
+#fred           1               0                 0
+html body main section p a span                   7
+.link.ref                       2                 0
+a.link                          1                 1
+a.link:hover                    2                 1
+
+
+*/
+/* external vs embedded vs inline and 
+color: red !important; */
+
+/* pseudo-element */
+p::first-letter {
+  font-size: 12rem;
+}
+p.red::before {
+  content: 'Hola';
+  display: inline;
+  color: red;
+}
+
+/* pseudo-classes */
+a:hover,
+a:link,
+a:visited,
+a:active {
+}
